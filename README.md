@@ -38,7 +38,7 @@ Built with [Ink](https://github.com/vadimdemedes/ink) (React for CLI), powered b
 
 ```bash
 # From source
-git clone https://github.com/itelofilho/1vp.git
+git clone https://github.com/itelo/1vp.git
 cd 1vp
 pnpm install
 pnpm dev
