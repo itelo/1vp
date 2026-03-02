@@ -4,22 +4,33 @@
   "description": "Vim-like terminal UI for 1Password",
   "type": "module",
   "bin": {
-    "1vp": "./src/cli.tsx"
+    "1vp": "./dist/cli.js"
   },
+  "main": "./dist/cli.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/cli.tsx",
-    "build": "tsup src/cli.tsx --format esm --dts",
-    "start": "node dist/cli.js"
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "keywords": [
     "1password",
     "tui",
     "terminal",
     "vim",
-    "ink"
+    "ink",
+    "cli"
   ],
-  "author": "",
+  "author": "itelo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itelo/1vp.git"
+  },
+  "homepage": "https://github.com/itelo/1vp",
   "packageManager": "pnpm@10.30.3",
   "pnpm": {
     "onlyBuiltDependencies": ["esbuild"]
